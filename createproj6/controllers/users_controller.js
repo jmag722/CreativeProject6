@@ -47,7 +47,10 @@ exports.login = function(req, res) {
                     req.session.user = user.id;
                     req.session.username = user.username;
                     req.session.msg = 'Authenticated as ' + user.username;
-                    req.session.color = user.color;
+                    req.session.high = user.high;
+                    req.session.wei = user.wei;
+                    req.session.pickup = user.pickup;
+                    req.session.picUrl = user.picUrl;
                     res.redirect('/');
                 });
             }
@@ -77,14 +80,20 @@ exports.updateUser = function(req, res) {
     User.findOne({ _id: req.session.user })
         .exec(function(err, user) {
             user.set('email', req.body.email);
-            user.set('color', req.body.color);
+            user.set('high', req.body.high);
+            user.set('wei', req.body.wei);
+            user.set('pickup', req.body.pickup);
+            user.set('picUrl', req.body.picUrl);
             user.save(function(err) {
                 if (err) {
                     res.sessor.error = err;
                 }
                 else {
                     req.session.msg = 'User Updated.';
-                    req.session.color = req.body.color;
+                    req.session.high = req.body.high;
+                    req.session.wei = req.body.wei;
+                    req.session.pickup = req.body.pickup;
+                    req.session.picUrl = req.body.picUrl;
                 }
                 res.redirect('/user');
             });
