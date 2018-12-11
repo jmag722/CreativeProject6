@@ -1,11 +1,10 @@
 body {
   padding: 10px;
-  background-color: #339966;
-  /*background-image:  linear-gradient(*/
-  /*    rgba(0, 0, 0, 0.5),*/
-  /*    rgba(0, 0, 0, 0.5)*/
-  /*  ),*/
-  /*  url("forest2.jpg");*/
+  /*background-color: #339966;*/
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)),
+  url("beach2.jpg");
+  background-size: cover;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
 }
@@ -17,8 +16,8 @@ a {
   background-color: #F5F5F5;
   border-radius: 5px;
   font-size: 30px;
-  border-color: #336666;
-  color: #339966;
+  border-color: #483D8B;
+  color: #483D8B;
   font-size: 16px;
 }
 
@@ -33,12 +32,12 @@ a {
   display: inline-block;
   width: 60%;
   padding: 7px;
-  color: #339966;
+  color: #483D8B;
   background-color: #F5F5F5;
   border-style: solid;
   border-radius: 5px;
   font-size: 30px;
-  border-color: #336666;
+  border-color: #483D8B;
 }
 
 form {
@@ -46,11 +45,11 @@ form {
   display: inline-block;
   width: auto;
   padding: 10px;
-  color: #339966;
+  color: #483D8B;
   background-color: #F5F5F5;
   border-style: solid;
   border-radius: 5px;
-  border-color: #336666;
+  border-color: #483D8B;
 }
 
 h2 {
@@ -63,17 +62,17 @@ h1 {
 
 label {
   font-size: 20px;
-  color: #339966;
+  color: #483D8B;
 }
 
 input {
   padding: 12px 20px;
   margin: 8px;
-  color: #339966;
-  background-color: #d9f2e6;
+  color: #483D8B;
+  background-color: #efedf7;
   border-style: solid;
   border-radius: 5px;
-  border-color: #336666;
+  border-color: #483D8B;
 }
 
 input[type=submit] {
@@ -81,9 +80,9 @@ input[type=submit] {
   margin: 8px;
   font-size: 15px;
   color: #F5F5F5;
-  background-color: #339966;
+  background-color: #483D8B;
   border-radius: 3px;
-  border-color: #336666;
+  border-color: #483D8B;
 }
 
 
@@ -96,6 +95,7 @@ input[type=submit] {
 
 #profInfo {
   font-size: 25px;
+
 }
 
 .profPic {
@@ -103,5 +103,18 @@ input[type=submit] {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 3px solid darkgreen;
+  border: 3px solid darkblue;
+}
+
+#profiles {
+  /*color: #F5F5F5;*/
+  padding: 12px 20px;
+  margin: 8px;
+  width:25%;
+  display:inline-block;
+  color: #483D8B;
+  background-color: #efedf7;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #483D8B;
 }
