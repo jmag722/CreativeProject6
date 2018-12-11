@@ -1,17 +1,18 @@
 <!doctype html>
-<html>
+<html ng-app="profileViewer">
     <head>
         <Title>Spouse Hunt</Title>
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
         <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
-        <script src="/javascripts/my_app.js"></script>
+        <script src="/javascripts/profile_viewer.js"></script>
     </head>
     
-    <body>
+    <body ng-controller="viewController">
         <a id="userLink" href="/">Home</a>
         <br>
+        <br>
+        <hr>
         <div ng-repeat="user in userList" id="profiles">
-            <hr>
             <img ng-src="{{user.picUrl}}" class="profPic">
             <br>
             {{user.username}}
@@ -19,6 +20,7 @@
             Height: {{user.high}} Weight: {{user.wei}}
             <br>
             Pickup Line: {{user.pickup}}
+            <hr>
         </div>    
     </body>
 </html>

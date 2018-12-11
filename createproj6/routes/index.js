@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var expressSession = require('express-session');
+var mongoose = require('mongoose');
+var userProfiles = mongoose.model('User');
 
 var users = require('../controllers/users_controller');
 console.log("before / Route");
@@ -64,6 +66,21 @@ router.get('/profiles', function(req, res) {
     req.session.msg = 'Access denied!';
     res.redirect('/login');
   }
+});
+router.get('/profiles/viewer', function(req, res, next) {
+    console.log('profiles viewer route');
+    if(req.session.user) {
+      userProfiles.find(function(err, data) {
+        if(err) {
+          return next(err);
+        }
+        res.json(data);
+      });
+    }
+    else {
+      req.session.msg = "Access denied!";
+      res.redirect('/login');
+    }
 });
 router.post('/signup', users.signup);
 router.post('/user/update', users.updateUser);
