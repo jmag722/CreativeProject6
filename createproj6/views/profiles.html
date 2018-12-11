@@ -8,13 +8,17 @@
     </head>
     
     <body>
+        <a id="userLink" href="/">Home</a>
+        <br>
         <div ng-repeat="user in userList" id="profiles">
+            <hr>
             <img ng-src="{{user.picUrl}}" class="profPic">
+            <br>
+            {{user.username}}
             <br>
             Height: {{user.high}} Weight: {{user.wei}}
             <br>
             Pickup Line: {{user.pickup}}
-            <hr>
         </div>    
     </body>
 </html>

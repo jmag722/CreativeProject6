@@ -55,6 +55,16 @@ router.get('/logout', function(req, res) {
     res.redirect('/login');
   });
 });
+router.get('/profiles', function(req, res) {
+  console.log("/profiles route");
+  if(req.session.user) {
+    res.render('profiles', { msg: req.session.msg });
+  }
+  else {
+    req.session.msg = 'Access denied!';
+    res.redirect('/login');
+  }
+});
 router.post('/signup', users.signup);
 router.post('/user/update', users.updateUser);
 router.post('/user/delete', users.deleteUser);
