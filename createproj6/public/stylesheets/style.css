@@ -93,3 +93,15 @@ input[type=submit] {
   color: #F5F5F5;
   font-size: 15px;
 }
+
+#profInfo {
+  font-size: 25px;
+}
+
+.profPic {
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid darkgreen;
+}

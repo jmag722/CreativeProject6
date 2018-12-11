@@ -13,20 +13,26 @@
         </h2>
         <a id="logoutLink" href="/logout">logout</a>
         <a id="editLink" href="/user">Edit User</a>
+        <a id="profileViewLink" href="/profiles">View Other Users</a>
     </div>
+    <br>
     <hr>
     <span class="mess" id="indexMsg">
         <%= msg %>
     </span>
+    <br>
+    <hr>
+    <br>
     <!--<hr>-->
-    <span class="mess" id="colorText">
-    Profile Picture:
-    <img ng-src="<%= picUrl %>">
-        
+    <span class="mess" id="profInfo">
+    <img class="profPic" ng-src="<%= picUrl %>">
+        <br>
     Height:
         <%= high %>
+        <br>
         Weight:
         <%= wei %>
+        <br>
          Pickup Line:
         <%= pickup %>
       </span>
